@@ -19,9 +19,18 @@ print(soup.find_all('div'))
 print(soup.find_all('a'))
 
 #if we want to find the first anchor tag
-print(soup.a)
+print(soup.a) 
 #or
 print(soup.find('a'))
 
 #find for specific Search ID
 print(soup.find(id="<id>"))
+
+#css selector
+print(soup.select('<id>'))
+
+
+#with beautiful soup we can keep chaining selection
+links = soup.select('.storylink')
+votes = soup.select('.score')
+print(votes[0].get('id'))
